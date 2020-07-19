@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/diamond_background_line"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:src="@drawable/ic_mail" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/badge"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="10"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:paddingTop="8dp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:paddingStart="0dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:text="Diamond"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="Help"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="- - - -"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:padding="16dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_photo"
+            android:background="@drawable/corners"/>
+
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/image"
+            android:layout_marginTop="12dp"
+            android:paddingTop="4dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
+            android:gravity="center"
+            android:background="@drawable/corners">
+
+            <TextView
+                android:id="@+id/country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Switch Country"
+                android:layout_marginEnd="8dp"
+                android:textSize="17sp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/nigeria" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_chevron_right" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="8dp"
+            android:text="Sign in"
+            android:textSize="17sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:drawableEnd="@drawable/ic_chevron_right"
+            android:layout_below="@id/linear_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12sp"
+            android:background="@drawable/corners" />
+
+    </RelativeLayout>
+
+<!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/image_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_register"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/icon_corners"
+                    android:backgroundTint="@android:color/holo_blue_light" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_register"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="4dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Register"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/image_forgot_login_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_forgot_login_details"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/icon_corners"
+                    android:backgroundTint="@android:color/holo_red_light" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_forgot_login_details"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="4dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Forgot Login Details"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/image_quick_transfer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_quick_transfer"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/icon_corners"
+                    android:backgroundTint="@android:color/holo_orange_dark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_quick_transfer"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="4dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Quick Transfer"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/image_changed_device"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_changed_device"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/icon_corners"
+                    android:backgroundTint="@android:color/holo_green_light" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_changed_device"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="4dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Changed Device?"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/image_quick_bill_payment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_quick_bill_payment"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/icon_corners"
+                    android:backgroundTint="@android:color/tertiary_text_dark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_quick_bill_payment"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="4dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Quick Bill Payment"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/image_open_an_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_open_an_account"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/icon_corners"
+                    android:backgroundTint="@android:color/darker_gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_open_an_account"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="4dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Open an Account"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/image_quick_loans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_quick_loans"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/icon_corners"
+                    android:backgroundTint="@android:color/holo_orange_light" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_quick_loans"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="4dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Quick Loans"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/image_internet_banking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_internet_banking"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/icon_corners"
+                    android:backgroundTint="@android:color/holo_blue_dark" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_internet_banking"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="4dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Internet Banking"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false">
+
+            <RelativeLayout
+                android:id="@+id/layout1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="12dp">
+
+                <ImageView
+                    android:id="@+id/image_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/icon_corners"
+                    android:backgroundTint="@android:color/holo_blue_light"
+                    android:src="@drawable/ic_register" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_register"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Register"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="12dp">
+
+                <ImageView
+                    android:id="@+id/image_forgot_login_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/icon_corners"
+                    android:backgroundTint="@android:color/holo_red_light"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_forgot_login_details" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_forgot_login_details"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingTop="4dp"
+                    android:text="Forgot Login Details"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false">
+
+            <RelativeLayout
+                android:id="@+id/layout3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="12dp">
+
+                <ImageView
+                    android:id="@+id/image_quick_transfer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/icon_corners"
+                    android:backgroundTint="@android:color/holo_orange_dark"
+                    android:src="@drawable/ic_quick_transfer" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_quick_transfer"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingTop="4dp"
+                    android:text="Quick Transfer"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="12dp">
+
+                <ImageView
+                    android:id="@+id/image_changed_device"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/icon_corners"
+                    android:backgroundTint="@android:color/holo_green_light"
+                    android:src="@drawable/ic_changed_device" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_changed_device"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingTop="4dp"
+                    android:text="Changed Device?"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false">
+
+            <RelativeLayout
+                android:id="@+id/layout5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="12dp">
+
+                <ImageView
+                    android:id="@+id/image_quick_bill_payment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/icon_corners"
+                    android:backgroundTint="@android:color/tertiary_text_dark"
+                    android:src="@drawable/ic_quick_bill_payment" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_quick_bill_payment"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingTop="4dp"
+                    android:text="Quick Bill Payment"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="12dp">
+
+                <ImageView
+                    android:id="@+id/image_open_an_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/icon_corners"
+                    android:backgroundTint="@android:color/darker_gray"
+                    android:src="@drawable/ic_open_an_account" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_open_an_account"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingTop="4dp"
+                    android:text="Open an Account"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false">
+
+            <RelativeLayout
+                android:id="@+id/layout7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="12dp">
+
+                <ImageView
+                    android:id="@+id/image_quick_loans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/icon_corners"
+                    android:backgroundTint="@android:color/holo_orange_light"
+                    android:src="@drawable/ic_quick_loans" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_quick_loans"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingTop="4dp"
+                    android:text="Quick Loans"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="12dp">
+
+                <ImageView
+                    android:id="@+id/image_internet_banking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/icon_corners"
+                    android:backgroundTint="@android:color/holo_blue_dark"
+                    android:src="@drawable/ic_internet_banking" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_internet_banking"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingTop="4dp"
+                    android:text="Internet Banking"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
